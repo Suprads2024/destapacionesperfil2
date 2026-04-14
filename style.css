@@ -1,0 +1,290 @@
+
+/* HEADER EXTERNO: pinta todo el ancho */
+.header{
+  width: 100% !important;
+  background: var(--azul) !important;
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 100 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+}
+
+/* CONTENEDOR INTERNO: achica solo el contenido */
+.header-inner{
+  width: 100% !important;
+  max-width: 1180px !important;
+  margin: 0 auto !important;
+  padding: 8px 16px !important;
+  min-height: 58px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 18px !important;
+  box-sizing: border-box !important;
+}
+
+/* BLOQUE LOGO */
+.header .logo{
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  flex: 0 0 auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.header .logo-badge{
+  width: 28px !important;
+  height: 28px !important;
+  min-width: 28px !important;
+  border-radius: 6px !important;
+  background: #f7c307 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 5px !important;
+  box-sizing: border-box !important;
+}
+
+.header .logo-badge svg{
+  width: 100% !important;
+  height: 100% !important;
+  display: block !important;
+}
+
+.header .logo-nombre{
+  margin: 0 !important;
+  padding: 0 !important;
+  color: #fff !important;
+  font-size: 10px !important;
+  line-height: 1.05 !important;
+  font-weight: 800 !important;
+  text-transform: uppercase !important;
+  letter-spacing: .4px !important;
+  white-space: normal !important;
+}
+
+/* BOTONERA */
+.header .header-tel{
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  gap: 8px !important;
+  flex: 0 0 auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.header .header-tel .hbtn{
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 7px !important;
+  padding: 10px 14px !important;
+  min-height: 36px !important;
+  border-radius: 7px !important;
+  font-size: 13px !important;
+  line-height: 1 !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  margin: 0 !important;
+  box-sizing: border-box !important;
+}
+
+.header .header-tel .hbtn svg{
+  width: 14px !important;
+  height: 14px !important;
+  flex: 0 0 14px !important;
+}
+
+.header .hbtn-tel{
+  background: #f7c307 !important;
+  color: #111 !important;
+}
+
+.header .hbtn-wa{
+  background: #25d366 !important;
+  color: #fff !important;
+}
+
+/* EVITA QUE ALGUN CSS GLOBAL META MÁRGENES RAROS */
+.header *{
+  box-sizing: border-box !important;
+}
+
+
+.hero
+{
+  background: var(--azul);
+  padding: 5px 16px 32px!important;
+  
+}
+
+.trust {
+    background: var(--amarillo);
+   
+    margin: 20px auto;
+    padding: 14px 16px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4px;
+}
+.urgencia-banner {
+  
+          max-width: 720px;
+        margin: 10px auto!important;
+}
+
+
+.seccion-label1 {
+             max-width: 720px;
+        margin: 0 auto;
+    }
+
+    .chips{
+             max-width: 720px;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: center;
+    }
+
+    
+@media (max-width: 768px){
+  .header .header-tel .hbtn-tel{
+    display: none !important;
+  }
+}
+  
+
+
+
+.trabajos-preview{
+  padding: 8px 16px 28px;
+  background: var(--blanco);
+}
+
+.trabajos-preview-inner{
+  width: 100%;
+}
+
+.trabajos-preview .seccion-h2{
+  margin-bottom: 16px;
+}
+
+.trabajos-grid{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.trabajo-card{
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+  background: #dfe6f2;
+  border: 1px solid var(--gris-borde);
+  min-height: 220px;
+  box-shadow: 0 10px 28px rgba(15,45,92,0.08);
+}
+
+.trabajo-card--grande{
+  min-height: 290px;
+}
+
+.trabajo-card img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.trabajo-info{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 14px;
+  background: linear-gradient(180deg, rgba(15,45,92,0) 0%, rgba(15,45,92,0.88) 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.trabajo-tag{
+  display: inline-flex;
+  align-self: flex-start;
+  padding: 4px 9px;
+  border-radius: 999px;
+  background: rgba(255,186,0,0.18);
+  border: 1px solid rgba(255,186,0,0.45);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .7px;
+}
+
+.trabajo-info strong{
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.25;
+  color: #fff;
+}
+
+.trabajo-info span:last-child{
+  font-size: 12px;
+  line-height: 1.4;
+  color: rgba(255,255,255,0.82);
+}
+
+@media (min-width: 680px){
+  .trabajos-preview{
+    padding: 36px 40px;
+  }
+
+  .trabajos-preview-inner{
+    max-width: 980px;
+    margin: 0 auto;
+  }
+
+  .trabajos-grid{
+    grid-template-columns: 1.35fr 1fr 1fr;
+    grid-auto-rows: 220px;
+  }
+
+  .trabajo-card{
+    min-height: auto;
+  }
+
+  .trabajo-card--grande{
+    grid-row: span 2;
+  }
+}
+
+@media (max-width: 679px){
+  .trabajos-grid{
+    grid-template-columns: 1fr !important;
+    justify-items: center !important;
+    gap: 12px !important;
+  }
+
+  .trabajo-card,
+  .trabajo-card--grande{
+    width: 60% !important;
+    max-width: 260px !important;
+    height: 260px !important;
+    min-height: 260px !important;
+    margin: 0 auto !important;
+  }
+
+  .trabajo-card img,
+  .trabajo-card--grande img{
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+}

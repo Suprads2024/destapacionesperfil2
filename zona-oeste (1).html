@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Destapaciones Cañerías Zona Oeste GBA | 24 hs | Llegamos en 1 hora</title>
+<meta name="description" content="Destapaciones de cañerías en Zona Oeste GBA. 24 hs todos los días. Llegamos en menos de 1 hora. Cloacas, pluviales, inodoros, cocinas. Llamá ahora.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+/* =============================================
+   RESET + BASE — mobile first, 390px canvas
+   ============================================= */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --azul:        #0F2D5C;
+  --azul-med:    #1A4A8A;
+  --amarillo:    #FFBA00;
+  --amarillo-dk: #E5A700;
+  --verde-wa:    #25D366;
+  --rojo:        #D0021B;
+  --gris-bg:     #F5F6FA;
+  --gris-borde:  #E2E5EE;
+  --texto:       #111827;
+  --texto-sec:   #6B7280;
+  --blanco:      #FFFFFF;
+  --radio:       10px;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  color: var(--texto);
+  background: var(--blanco);
+  /* espacio para barra flotante */
+  padding-bottom: 80px;
+}
+
+a { text-decoration: none; }
+img { display: block; width: 100%; }
+
+/* =============================================
+   BARRA TOP URGENCIA
+   ============================================= */
+.top-bar {
+  background: var(--rojo);
+  color: #fff;
+  text-align: center;
+  padding: 9px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  line-height: 1.4;
+}
+.top-bar strong { font-weight: 800; }
+
+/* =============================================
+   HEADER — logo + tel compacto
+   ============================================= */
+.header {
+  background: var(--azul);
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  flex-shrink: 0;
+}
+.logo-badge {
+  width: 38px; height: 38px;
+  background: var(--amarillo);
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.logo-badge svg { width: 22px; height: 22px; }
+.logo-nombre {
+  font-size: 13px;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+.logo-sub {
+  font-size: 10px;
+  color: rgba(255,255,255,0.6);
+  font-weight: 500;
+  margin-top: 1px;
+}
+.header-tel {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+.hbtn {
+  display: flex; align-items: center; gap: 6px;
+  padding: 9px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  white-space: nowrap;
+}
+.hbtn svg { width: 14px; height: 14px; flex-shrink: 0; }
+.hbtn-tel  { background: var(--amarillo); color: var(--azul); }
+.hbtn-wa   { background: var(--verde-wa); color: #fff; }
+
+/* =============================================
+   HERO — above the fold en 390px
+   ============================================= */
+.hero {
+  background: var(--azul);
+  padding: 28px 16px 32px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+/* decoración sutil */
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -50px; right: -50px;
+  width: 200px; height: 200px;
+  border-radius: 50%;
+  background: rgba(255,186,0,0.06);
+  pointer-events: none;
+}
+
+.hero-zona {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255,186,0,0.15);
+  border: 1px solid rgba(255,186,0,0.4);
+  color: var(--amarillo);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 20px;
+  margin-bottom: 14px;
+}
+.hero-zona svg { width: 12px; height: 12px; fill: var(--amarillo); }
+
+.hero h1 {
+  font-size: 30px;
+  font-weight: 900;
+  color: #fff;
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+  margin-bottom: 10px;
+}
+.hero h1 em { color: var(--amarillo); font-style: normal; }
+
+.hero-sub {
+  font-size: 15px;
+  color: rgba(255,255,255,0.82);
+  line-height: 1.5;
+  margin-bottom: 22px;
+  max-width: 340px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* CTAs — el llamar tiene que ser el más grande de la página */
+.hero-ctas {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 360px;
+  margin: 0 auto;
+}
+.cta-llamar {
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  background: var(--amarillo);
+  color: var(--azul);
+  font-size: 19px;
+  font-weight: 900;
+  padding: 18px 20px;
+  border-radius: var(--radio);
+  border: none; cursor: pointer;
+  animation: pulso 2.2s ease-in-out infinite;
+  letter-spacing: -0.2px;
+}
+@keyframes pulso {
+  0%,100% { box-shadow: 0 0 0 0 rgba(255,186,0,.45); }
+  55%      { box-shadow: 0 0 0 12px rgba(255,186,0,0); }
+}
+.cta-llamar svg { width: 22px; height: 22px; flex-shrink: 0; }
+
+.cta-wa {
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  background: var(--verde-wa);
+  color: #fff;
+  font-size: 17px;
+  font-weight: 800;
+  padding: 15px 20px;
+  border-radius: var(--radio);
+}
+.cta-wa svg { width: 20px; height: 20px; flex-shrink: 0; }
+
+.hero-nota {
+  margin-top: 14px;
+  font-size: 12px;
+  color: rgba(255,255,255,0.55);
+  position: relative; z-index: 1;
+}
+
+/* =============================================
+   TRUST — 3 items horizontales, sin scroll
+   ============================================= */
+.trust {
+  background: var(--amarillo);
+  padding: 14px 16px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+}
+.trust-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 3px;
+  padding: 6px 4px;
+}
+.trust-num {
+  font-size: 17px;
+  font-weight: 900;
+  color: var(--azul);
+  line-height: 1;
+}
+.trust-lbl {
+  font-size: 10px;
+  font-weight: 600;
+  color: rgba(15,45,92,0.75);
+  line-height: 1.3;
+  text-align: center;
+}
+
+/* =============================================
+   URGENCIA BANNER — refuerzo emocional
+   ============================================= */
+.urgencia-banner {
+  background: var(--gris-bg);
+  border-left: 4px solid var(--rojo);
+  margin: 20px 16px;
+  border-radius: 0 var(--radio) var(--radio) 0;
+  padding: 14px 16px;
+}
+.urgencia-banner p {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--texto);
+  line-height: 1.5;
+}
+.urgencia-banner p strong { color: var(--rojo); }
+
+/* =============================================
+   PASOS — 4 pasos compactos
+   ============================================= */
+.pasos {
+  padding: 24px 16px;
+}
+.seccion-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--azul-med);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+}
+.seccion-h2 {
+  font-size: 22px;
+  font-weight: 900;
+  color: var(--azul);
+  line-height: 1.2;
+  margin-bottom: 18px;
+  letter-spacing: -0.3px;
+}
+.seccion-h2 em { color: var(--amarillo-dk); font-style: normal; }
+
+.pasos-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.paso {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--gris-borde);
+}
+.paso:last-child { border-bottom: none; }
+.paso-n {
+  width: 36px; height: 36px;
+  background: var(--azul);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 15px;
+  font-weight: 900;
+  color: var(--amarillo);
+  flex-shrink: 0;
+}
+.paso-txt strong {
+  display: block;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--texto);
+  line-height: 1.3;
+  margin-bottom: 2px;
+}
+.paso-txt span {
+  font-size: 13px;
+  color: var(--texto-sec);
+  line-height: 1.4;
+}
+
+/* =============================================
+   SERVICIOS — acordeón mobile
+   ============================================= */
+.servicios {
+  background: var(--gris-bg);
+  padding: 24px 16px;
+}
+.servicios-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 16px;
+}
+.servicio {
+  background: var(--blanco);
+  border: 1px solid var(--gris-borde);
+  border-radius: var(--radio);
+  overflow: hidden;
+}
+.servicio-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.serv-ico {
+  width: 38px; height: 38px;
+  background: rgba(15,45,92,0.07);
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.serv-ico svg { width: 20px; height: 20px; fill: var(--azul); }
+.serv-nombre {
+  flex: 1;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--texto);
+  line-height: 1.3;
+}
+.serv-badge {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--azul-med);
+  background: rgba(26,74,138,0.1);
+  padding: 3px 8px;
+  border-radius: 10px;
+  white-space: nowrap;
+}
+.serv-chevron {
+  width: 20px; height: 20px;
+  fill: var(--texto-sec);
+  transition: transform 0.25s;
+  flex-shrink: 0;
+}
+.servicio.open .serv-chevron { transform: rotate(180deg); }
+.serv-body {
+  display: none;
+  padding: 0 16px 16px;
+  border-top: 1px solid var(--gris-borde);
+  padding-top: 12px;
+}
+.servicio.open .serv-body { display: block; }
+.serv-body p {
+  font-size: 14px;
+  color: var(--texto-sec);
+  line-height: 1.6;
+}
+.serv-cta-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--azul-med);
+  border: 1.5px solid var(--azul-med);
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+.serv-cta-link svg { width: 14px; height: 14px; fill: var(--azul-med); }
+
+/* =============================================
+   GARANTIAS — iconos grandes
+   ============================================= */
+.garantias {
+  padding: 24px 16px;
+}
+.garantias-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 16px;
+}
+.garantia-card {
+  background: var(--gris-bg);
+  border-radius: var(--radio);
+  padding: 16px 14px;
+  text-align: center;
+}
+.garantia-ico {
+  font-size: 26px;
+  margin-bottom: 8px;
+  line-height: 1;
+}
+.garantia-card strong {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--azul);
+  line-height: 1.3;
+  margin-bottom: 4px;
+}
+.garantia-card span {
+  font-size: 12px;
+  color: var(--texto-sec);
+  line-height: 1.4;
+}
+
+/* =============================================
+   COBERTURA — chips zona
+   ============================================= */
+.cobertura {
+  background: var(--azul);
+  padding: 24px 16px;
+}
+.cobertura .seccion-label { color: rgba(255,186,0,0.7); }
+.cobertura .seccion-h2 { color: #fff; margin-bottom: 14px; }
+.cobertura .seccion-h2 em { color: var(--amarillo); }
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+.chip {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.88);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 20px;
+}
+
+/* =============================================
+   FORMULARIO — minimalista, 3 campos
+   ============================================= */
+.form-section {
+  padding: 24px 16px;
+  background: var(--gris-bg);
+}
+.form-card {
+  background: var(--blanco);
+  border: 1px solid var(--gris-borde);
+  border-radius: 14px;
+  padding: 22px 18px;
+}
+.form-card .seccion-h2 { font-size: 20px; margin-bottom: 4px; }
+.form-desc {
+  font-size: 13px;
+  color: var(--texto-sec);
+  margin-bottom: 18px;
+  line-height: 1.5;
+}
+.fgrupo { margin-bottom: 12px; }
+.fgrupo label {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--azul);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 5px;
+}
+.fgrupo input,
+.fgrupo select {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1.5px solid var(--gris-borde);
+  border-radius: 8px;
+  font-size: 16px; /* 16px evita zoom en iOS */
+  font-family: 'Inter', sans-serif;
+  color: var(--texto);
+  background: var(--blanco);
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+  transition: border-color 0.2s;
+}
+.fgrupo input:focus,
+.fgrupo select:focus { border-color: var(--azul); }
+
+.btn-form {
+  width: 100%;
+  background: var(--azul);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 800;
+  padding: 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  margin-top: 4px;
+  transition: background 0.15s;
+}
+.btn-form:active { background: var(--azul-med); }
+.btn-form svg { width: 18px; height: 18px; }
+.form-note {
+  font-size: 11px;
+  color: var(--texto-sec);
+  text-align: center;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+/* =============================================
+   PAGOS
+   ============================================= */
+.pagos {
+  padding: 20px 16px;
+  text-align: center;
+  border-top: 1px solid var(--gris-borde);
+}
+.pagos-titulo {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--texto-sec);
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.pagos-chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 7px;
+}
+.pago-chip {
+  background: var(--gris-bg);
+  border: 1px solid var(--gris-borde);
+  color: var(--texto);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 8px;
+}
+
+/* =============================================
+   FOOTER
+   ============================================= */
+footer {
+  background: var(--azul);
+  color: rgba(255,255,255,0.6);
+  text-align: center;
+  padding: 20px 16px 10px;
+  font-size: 12px;
+  line-height: 1.7;
+}
+footer strong { color: #fff; }
+
+/* =============================================
+   CTA FIJO INFERIOR — la estrella del mobile
+   ============================================= */
+.cta-fijo {
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  z-index: 200;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--blanco);
+  border-top: 1.5px solid var(--gris-borde);
+  padding: 10px 12px 14px;
+  gap: 8px;
+  /* safe area para iPhone X+ */
+  padding-bottom: max(14px, env(safe-area-inset-bottom));
+}
+.fijo-btn {
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  padding: 14px 10px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 800;
+  border: none;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  transition: opacity 0.15s;
+}
+.fijo-btn:active { opacity: 0.85; transform: scale(0.98); }
+.fijo-btn svg { width: 18px; height: 18px; flex-shrink: 0; }
+.fijo-tel { background: var(--amarillo); color: var(--azul); }
+.fijo-wa  { background: var(--verde-wa); color: #fff; }
+
+/* =============================================
+   DESKTOP UPGRADE — de 680px para arriba
+   ============================================= */
+@media (min-width: 680px) {
+  body { padding-bottom: 0; }
+
+  .hero { padding: 52px 40px; }
+  .hero h1 { font-size: 46px; }
+  .hero-ctas {
+    flex-direction: row;
+    justify-content: center;
+    max-width: none;
+  }
+  .cta-llamar, .cta-wa { flex: 0 0 auto; }
+
+  .trust { grid-template-columns: repeat(3, 1fr); max-width: 680px; margin: 0 auto; }
+
+
+  .pasos { padding: 40px; max-width: 720px; margin: 0 auto; }
+  .servicios { padding: 40px; }
+  .servicios-lista {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 760px;
+    margin: 16px auto 0;
+  }
+  .garantias { padding: 40px; max-width: 720px; margin: 0 auto; }
+  .garantias-grid { grid-template-columns: repeat(4, 1fr); }
+  .cobertura { padding: 36px 40px; }
+  .form-section { padding: 40px; }
+  .form-card { max-width: 520px; margin: 0 auto; }
+
+  .cta-fijo { display: none; }
+
+  .header-tel { gap: 10px; }
+  .hbtn { font-size: 14px; padding: 10px 18px; }
+}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  🚨 Urgencias 24 hs · Todos los días · <strong>Llegamos en menos de 1 hora</strong>
+</div>
+
+<!-- HEADER STICKY -->
+<!-- HEADER STICKY -->
+<header class="header">
+  <div class="header-inner">
+    <div class="logo">
+      <div class="logo-badge">
+        <svg viewBox="0 0 24 24" fill="none">
+          <path d="M7 4C7 2.9 7.9 2 9 2h6c1.1 0 2 .9 2 2v1h2c1.1 0 2 .9 2 2v13c0 1.1-.9 2-2 2H5c-1.1 0-2-.9-2-2V7c0-1.1.9-2 2-2h2V4zm2 0v1h6V4H9zm-4 3v13h14V7H5zm7 2a3 3 0 100 6 3 3 0 000-6zm0 1.5a1.5 1.5 0 110 3 1.5 1.5 0 010-3z" fill="#0F2D5C"/>
+        </svg>
+      </div>
+
+      <div>
+        <div class="logo-nombre">Destapaciones<br>Cañerías</div>
+      </div>
+    </div>
+
+    <div class="header-tel">
+      <a href="tel:541162532056" class="hbtn hbtn-tel">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.58.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.26.2 2.47.57 3.6.11.33.03.7-.25.98L6.6 10.8z"/>
+        </svg>
+        Llamar
+      </a>
+
+      <a href="https://wa.me/541162532056" class="hbtn hbtn-wa" target="_blank" rel="noopener">
+        <i class="fa fa-whatsapp whatsapp-icon" aria-hidden="true"></i>
+        <span>Escribir por WhatsApp</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-zona">
+    <svg viewBox="0 0 12 12"><path d="M6 0C3.79 0 2 1.79 2 4c0 3 4 8 4 8s4-5 4-8c0-2.21-1.79-4-4-4zm0 5.5C5.17 5.5 4.5 4.83 4.5 4S5.17 2.5 6 2.5 7.5 3.17 7.5 4 6.83 5.5 6 5.5z"/></svg>
+    Zona Oeste GBA
+  </div>
+
+  <h1>Destapaciones de<br>Cañerías en<br><em>Zona Oeste GBA</em></h1>
+
+  <p class="hero-sub">Llegamos a tu domicilio en Zona Oeste GBA en <strong style="color:#fff;">menos de 1 hora</strong>. +20 años de experiencia. Servicio 24 hs, todos los días.</p>
+
+  <div class="hero-ctas">
+    <a href="tel:541162532056" class="cta-llamar">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.58.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.26.2 2.47.57 3.6.11.33.03.7-.25.98L6.6 10.8z"/></svg>
+      Llamar — 541162532056
+    </a>
+    <a href="https://wa.me/541162532056" class="cta-wa" target="_blank" rel="noopener">
+      <i class="fa fa-whatsapp whatsapp-icon" aria-hidden="true"></i>
+        <span>Escribir por WhatsApp</span> </a>
+  </div>
+
+  <p class="hero-nota">📍 Atendemos toda la Zona Oeste GBA · Domingos y feriados incluidos</p>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust">
+  <div class="trust-item">
+    <span class="trust-num">+20</span>
+    <span class="trust-lbl">años de<br>experiencia</span>
+  </div>
+  <div class="trust-item">
+    <span class="trust-num">&lt;1 h</span>
+    <span class="trust-lbl">tiempo de<br>llegada</span>
+  </div>
+  <div class="trust-item">
+    <span class="trust-num">24/7</span>
+    <span class="trust-lbl">todos los<br>días</span>
+  </div>
+</div>
+
+<!-- URGENCIA REFUERZO -->
+<div class="urgencia-banner">
+  <p>¿Cloaca desbordada, inodoro tapado o pluvial sin salida? <strong>Resolvemos tu emergencia hoy.</strong> Llamá o escribí ahora — atendemos las 24 hs, también domingos y feriados.</p>
+</div>
+
+
+
+
+<!-- TRABAJOS REALES -->
+<section class="trabajos-preview">
+  <div class="trabajos-preview-inner">
+    <div class="seccion-label">Trabajos reales</div>
+    <h2 class="seccion-h2">Así trabajamos en<br><em>destapaciones reales</em></h2>
+
+    <div class="trabajos-grid">
+      <article class="trabajo-card trabajo-card--grande">
+        <img src="img/cloacas.jpeg" alt="Destapación de cloaca en domicilio" loading="lazy">
+        <div class="trabajo-info">
+          <span class="trabajo-tag">Cloacas</span>
+          <strong>Destapación de cloaca en domicilio</strong>
+          <span>Intervención rápida con equipo profesional</span>
+        </div>
+      </article>
+
+      <article class="trabajo-card">
+        <img src="img/banio2.jpeg" alt="Trabajo de destapación en baño" loading="lazy">
+        <div class="trabajo-info">
+          <span class="trabajo-tag">Baños</span>
+          <strong>Inodoros y desagües</strong>
+        </div>
+      </article>
+       <article class="trabajo-card">
+        <img src="img/cocina.jpeg" alt="Trabajo de destapación en baño" loading="lazy">
+        <div class="trabajo-info">
+          <span class="trabajo-tag">Prevención</span>
+          <strong>Mantenimiento preventivo</strong>
+        </div>
+      </article> <article class="trabajo-card">
+        <img src="img/banio.jpg" alt="Trabajo de destapación en baño" loading="lazy">
+        <div class="trabajo-info">
+          <span class="trabajo-tag">Urgencias</span>
+          <strong>Urgencias en destapaciones</strong>
+        </div>
+      </article>
+
+      <article class="trabajo-card">
+        <img src="img/terraza.png" alt="Destapación de pluvial y terraza" loading="lazy">
+        <div class="trabajo-info">
+          <span class="trabajo-tag">Pluviales</span>
+          <strong>Terrazas, patios y balcones</strong>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+<!-- PASOS -->
+<section class="pasos">
+  <div class="seccion-label">Cómo funciona</div>
+  <h2 class="seccion-h2">Resolvemos tu problema<br>en <em>4 pasos simples</em></h2>
+  <div class="pasos-lista">
+    <div class="paso">
+      <div class="paso-n">1</div>
+      <div class="paso-txt">
+        <strong>Llamá o escribí por WhatsApp</strong>
+        <span>Te atendemos de inmediato, a cualquier hora del día o la noche.</span>
+      </div>
+    </div>
+    <div class="paso">
+      <div class="paso-n">2</div>
+      <div class="paso-txt">
+        <strong>Te damos el precio antes de ir</strong>
+        <span>Sin sorpresas. Sabés el costo antes de que lleguemos a tu domicilio.</span>
+      </div>
+    </div>
+    <div class="paso">
+      <div class="paso-n">3</div>
+      <div class="paso-txt">
+        <strong>Llegamos en menos de 1 hora</strong>
+        <span>Movilidad propia en Zona Oeste GBA con equipamiento completo.</span>
+      </div>
+    </div>
+    <div class="paso">
+      <div class="paso-n">4</div>
+      <div class="paso-txt">
+        <strong>Problema resuelto, con garantía</strong>
+        <span>Trabajo prolijo y duradero. Dejamos todo limpio al finalizar.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICIOS ACORDEÓN -->
+<section class="servicios">
+   <div class="seccion-label1">
+  <div class="seccion-label">Qué destapamos</div>
+  <h2 class="seccion-h2">Servicios de<br><em>destapación profesional</em></h2>
+  </div>
+  <div class="servicios-lista" id="serviciosList">
+
+    <div class="servicio open">
+      <div class="servicio-header" onclick="toggleServicio(this)">
+        <div class="serv-ico">
+          <svg viewBox="0 0 24 24"><path d="M3 3h18v2H3zm0 4h18v2H3zm0 4h18v2H3zm0 4h12v2H3zm0 4h8v2H3z"/></svg>
+        </div>
+        <span class="serv-nombre">Cloacas y columnas</span>
+        <span class="serv-badge">Urgencia</span>
+        <svg class="serv-chevron" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+      </div>
+      <div class="serv-body">
+        <p>Destapación de cloacas, columnas cloacales y cámaras de inspección. Resolvemos desbordes y obstrucciones severas con máquina electromecánica profesional.</p>
+        <a href="tel:541162532056" class="serv-cta-link">
+          <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.58.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.26.2 2.47.57 3.6.11.33.03.7-.25.98L6.6 10.8z"/></svg>
+          Llamar por este servicio
+        </a>
+      </div>
+    </div>
+
+    <div class="servicio">
+      <div class="servicio-header" onclick="toggleServicio(this)">
+        <div class="serv-ico">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8 6 4 9 4 13a8 8 0 0016 0c0-4-4-7-8-11zm0 16a6 6 0 01-6-6c0-2.8 2.4-5.4 6-9.3C15.6 6.6 18 9.2 18 13a6 6 0 01-6 6z"/></svg>
+        </div>
+        <span class="serv-nombre">Hidrojet alta presión</span>
+        <span class="serv-badge">Potente</span>
+        <svg class="serv-chevron" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+      </div>
+      <div class="serv-body">
+        <p>Limpieza profunda con agua a alta presión. Elimina grasa acumulada, raíces, sedimentos y obstrucciones que la máquina convencional no puede resolver.</p>
+        <a href="tel:541162532056" class="serv-cta-link">
+          <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.58.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.26.2 2.47.57 3.6.11.33.03.7-.25.98L6.6 10.8z"/></svg>
+          Llamar por este servicio
+        </a>
+      </div>
+    </div>
+
+    <div class="servicio">
+      <div class="servicio-header" onclick="toggleServicio(this)">
+        <div class="serv-ico">
+          <svg viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 19.82L5.71 21l1-2h10.58c.35-.81.54-1.81.41-3C17.28 13.65 15 12 17 8zM11.67 13.6C12.93 12.1 15 11 17 8c0 0-5 2-5 7 0 0-1.5-1.7-2.33-1.4z"/></svg>
+        </div>
+        <span class="serv-nombre">Pluviales y terrazas</span>
+        <span class="serv-badge">Lluvia</span>
+        <svg class="serv-chevron" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+      </div>
+      <div class="serv-body">
+        <p>Destapación de cañerías pluviales en terrazas, balcones, patios y galpones. Prevenimos inundaciones antes de que lleguen las lluvias.</p>
+        <a href="tel:541162532056" class="serv-cta-link">
+          <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.58.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.26.2 2.47.57 3.6.11.33.03.7-.25.98L6.6 10.8z"/></svg>
+          Llamar por este servicio
+        </a>
+      </div>
+    </div>
+
+    <div class="servicio">
+      <div class="servicio-header" onclick="toggleServicio(this)">
+        <div class="serv-ico">
+          <svg viewBox="0 0 24 24"><path d="M9 3H5C3.9 3 3 3.9 3 5v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V9l-6-6H9zm5 16H5V5h7v5h5v9zM8 14h8v2H8zm0-4h8v2H8z"/></svg>
+        </div>
+        <span class="serv-nombre">Inodoros y baños</span>
+        <span class="serv-badge">Sin obra</span>
+        <svg class="serv-chevron" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+      </div>
+      <div class="serv-body">
+        <p>Destapación de inodoros, bidés, duchas y bañeras. Solución rápida y sin romper pisos ni paredes. Ideal para departamentos y casas.</p>
+        <a href="tel:541162532056" class="serv-cta-link">
+          <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.58.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.26.2 2.47.57 3.6.11.33.03.7-.25.98L6.6 10.8z"/></svg>
+          Llamar por este servicio
+        </a>
+      </div>
+    </div>
+
+    <div class="servicio">
+      <div class="servicio-header" onclick="toggleServicio(this)">
+        <div class="serv-ico">
+          <svg viewBox="0 0 24 24"><path d="M18 4H6a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2zm-7 13H9v-2h2v2zm0-4H9v-2h2v2zm0-4H9V7h2v2zm4 8h-2v-2h2v2zm0-4h-2v-2h2v2zm0-4h-2V7h2v2z"/></svg>
+        </div>
+        <span class="serv-nombre">Cocinas y bachas</span>
+        <span class="serv-badge">Grasa</span>
+        <svg class="serv-chevron" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+      </div>
+      <div class="serv-body">
+        <p>Eliminamos obstrucciones de grasa, restos orgánicos y depósitos en cañerías de cocinas, bachas y lavaderos residenciales y gastronómicos.</p>
+        <a href="tel:541162532056" class="serv-cta-link">
+          <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.58.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.26.2 2.47.57 3.6.11.33.03.7-.25.98L6.6 10.8z"/></svg>
+          Llamar por este servicio
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- GARANTÍAS -->
+<section class="garantias">
+  <div class="seccion-label">Por qué elegirnos</div>
+  <h2 class="seccion-h2">Lo que nos <em>diferencia</em></h2>
+  <div class="garantias-grid">
+    <div class="garantia-card">
+      <div class="garantia-ico">🏆</div>
+      <strong>+20 años<br>de experiencia</strong>
+      <span>Conocemos cada tipo de cañería en Zona Oeste GBA</span>
+    </div>
+    <div class="garantia-card">
+      <div class="garantia-ico">⚡</div>
+      <strong>Menos de<br>1 hora</strong>
+      <span>Llegamos rápido con equipo completo</span>
+    </div>
+    <div class="garantia-card">
+      <div class="garantia-ico">🔒</div>
+      <strong>Trabajo<br>garantizado</strong>
+      <span>Si vuelve el problema, volvemos nosotros</span>
+    </div>
+    <div class="garantia-card">
+      <div class="garantia-ico">💰</div>
+      <strong>Precio antes<br>de empezar</strong>
+      <span>Sin sorpresas ni cargos ocultos</span>
+    </div>
+  </div>
+</section>
+
+<!-- COBERTURA -->
+<section class="cobertura">
+  <div class="seccion-label1">
+  <div class="seccion-label">Dónde trabajamos</div>
+  <h2 class="seccion-h2">Toda<br><em>La Plata y alrededores</em></h2>
+  </div>
+  <div class="chips">
+    <span class="chip">Morón</span>
+    <span class="chip">Tres de Febrero</span>
+    <span class="chip">La Matanza</span>
+    <span class="chip">Merlo</span>
+    <span class="chip">Los Polvorines</span>
+    <span class="chip">San Miguel</span>
+    <span class="chip">Bella Vista</span>
+    <span class="chip">Hurlingham</span>
+    <span class="chip">Ituzaingó</span>
+    <span class="chip">Haedo</span>
+    <span class="chip">Ramos Mejía</span>
+    <span class="chip">Ciudadela</span>
+    <span class="chip">San Justo</span>
+    <span class="chip">Caseros</span>
+    <span class="chip">y toda la Zona Oeste</span>
+  </div>
+</section>
+
+<!-- FORMULARIO -->
+<section class="form-section" id="form">
+  <div class="form-card">
+    <h2 class="seccion-h2">¿Preferís que<br>te <em>llamemos</em>?</h2>
+    <p class="form-desc">Dejá tu número y te contactamos en minutos.</p>
+    <form>
+      <div class="fgrupo">
+        <label>Tu nombre</label>
+        <input type="text" placeholder="Ej: María González" autocomplete="name">
+      </div>
+      <div class="fgrupo">
+        <label>Teléfono *</label>
+        <input type="tel" placeholder="11 1234-5678" required autocomplete="tel">
+      </div>
+      <div class="fgrupo">
+        <label>¿Qué problema tenés?</label>
+        <select>
+          <option value="">Seleccioná una opción</option>
+          <option>Cloaca tapada / desborde</option>
+          <option>Pluvial tapado (terraza o balcón)</option>
+          <option>Inodoro tapado</option>
+          <option>Bacha de cocina tapada</option>
+          <option>Pileta de patio tapada</option>
+          <option>No sé — necesito diagnóstico</option>
+        </select>
+      </div>
+      <button type="submit" class="btn-form">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+        Quiero que me llamen
+      </button>
+    </form>
+    <p class="form-note">O llamanos vos directamente al <strong>541162532056</strong> — atendemos ahora</p>
+  </div>
+</section>
+
+<!-- PAGOS -->
+<section class="pagos">
+  <p class="pagos-titulo">Medios de pago aceptados</p>
+  <div class="pagos-chips">
+    <span class="pago-chip">💵 Efectivo</span>
+    <span class="pago-chip">🏦 Transferencia</span>
+    <span class="pago-chip">📱 MercadoPago</span>
+    <span class="pago-chip">💳 Tarjeta crédito</span>
+    <span class="pago-chip">💳 Tarjeta débito</span>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <strong>Destapaciones Cañerías · Capital Federal</strong><br>
+  Servicio 24 hs · Todos los días · Domingos y feriados<br>
+  📞 <strong>541162532056</strong> · WhatsApp: <strong>541162532056</strong>
+</footer>
+
+<!-- CTA FIJO INFERIOR — siempre visible en mobile -->
+<div class="cta-fijo">
+  <a href="tel:541162532056" class="fijo-btn fijo-tel">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.58.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.26.2 2.47.57 3.6.11.33.03.7-.25.98L6.6 10.8z"/></svg>
+    ☎ Llamar ahora
+  </a>
+  <a href="https://wa.me/541162532056" class="fijo-btn fijo-wa" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.85-2-.95-.3-.1-.5-.15-.7.15s-.8 1-.98 1.2c-.18.2-.37.22-.67.07-1.88-.94-3.12-2.5-3.44-2.93-.32-.5.3-.7.9-1.88.1-.2 0-.4-.07-.52-.08-.12-.7-1.78-1-2.37-.25-.6-.5-.5-.7-.5h-.58c-.2 0-.52.07-.8.37C8.42 7.45 7.5 8.3 7.5 10.04s1.04 3.47 1.18 3.7c.15.25 2.05 3.13 4.96 4.39.7.3 1.24.48 1.66.6.7.2 1.34.17 1.84.1.56-.07 1.73-.7 1.97-1.38.24-.68.24-1.26.17-1.38-.07-.12-.26-.2-.56-.34zM12.05 2C6.54 2 2.06 6.48 2.06 12c0 1.88.52 3.63 1.42 5.13L2 22l4.98-1.3A9.9 9.9 0 0012.05 22C17.56 22 22 17.52 22 12S17.56 2 12.05 2z"/></svg>
+    WhatsApp
+  </a>
+</div>
+
+<script>
+function toggleServicio(header) {
+  const card = header.parentElement;
+  card.classList.toggle('open');
+}
+</script>
+</body>
+</html>
