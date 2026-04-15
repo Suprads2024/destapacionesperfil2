@@ -30,8 +30,8 @@
 }
 
 .logo-img {
-  width: 100%;
-  height: 100%;
+  width: 150%;
+  height: 150%;
   object-fit: contain;
   display: block;
 }
@@ -144,7 +144,7 @@
 
 .hero
 {
-  background: var(--azul);
+  background: #002c47;
   padding: 5px 16px 32px!important;
   
 }
