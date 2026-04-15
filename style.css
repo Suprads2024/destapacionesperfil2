@@ -10,7 +10,31 @@
   padding: 0 !important;
   box-sizing: border-box !important;
 }
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  flex-shrink: 0;
+}
 
+.logo-badge {
+  width: 38px;
+  height: 38px;
+  background: transparent;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
 /* CONTENEDOR INTERNO: achica solo el contenido */
 .header-inner{
   width: 100% !important;
@@ -36,11 +60,11 @@
 }
 
 .header .logo-badge{
-  width: 28px !important;
-  height: 28px !important;
+  width: 48px !important;
+  height: 48px !important;
   min-width: 28px !important;
   border-radius: 6px !important;
-  background: #f7c307 !important;
+  background: #ffffff !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
